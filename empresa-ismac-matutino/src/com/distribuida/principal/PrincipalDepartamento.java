@@ -16,13 +16,19 @@ public class PrincipalDepartamento  {
 		// TODO Auto-generated method stub
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
-		DepartamentoDao departamentoDao = context.getBean("DepartamentoDaoimpl",DepartamentoDao.class);
+	//	DepartamentoDao departamentoDao = context.getBean("DepartamentoDaoimpl",DepartamentoDao.class);
 
+		DepartamentoDao  departamentoDao = context.getBean("departamentoDaoimpl", DepartamentoDao.class);  
+		
 		List<Departamento> departamento = departamentoDao.findALL();
 		departamento.forEach(item -> {
 			System.out.println(item.toString());
 		});
 				context.close();
 	}
-	
 }
+
+
+
+
+

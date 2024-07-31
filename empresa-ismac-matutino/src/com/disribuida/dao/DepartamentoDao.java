@@ -11,9 +11,9 @@ public interface DepartamentoDao {
 
 	public Departamento findOne(int id);
 	
-	public void add (Departamento Departamento);
+	public void add (Departamento departamento);
 	
-	public void up (Departamento Departamento);
+	public void up (Departamento departamento);
 	
 	public void del (int id);
 }
